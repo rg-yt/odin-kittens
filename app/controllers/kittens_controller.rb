@@ -37,4 +37,10 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
   end
+
+  private
+
+  def kitten_params
+    params.expect(kitten: [ :name, :age, :cuteness, :softness ])
+  end
 end
