@@ -1,10 +1,10 @@
 class KittensController < ApplicationController
   def index
-    @kittens = Kittens.all
+    @kittens = Kitten.all
   end
 
   def show
-    @kitten = Kittens.find(params[:id])
+    @kitten = Kitten.find(params[:id])
   end
 
   def new
