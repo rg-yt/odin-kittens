@@ -1,1 +1,2 @@
 <%= render "form", kitten: @kitten %>
+<%= button_to "Delete Kitten", kitten_path(@kitten.id), method: :delete %>

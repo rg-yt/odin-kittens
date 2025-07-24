@@ -3,6 +3,7 @@
     <div style="padding-bottom:1rem">
         <div>Name: <%= kitten.name %></div>
         <div>Age: <%= kitten.age %></div>
+        <%= link_to "delete kitty", kitten_path(kitten.id), data: { turbo_method: :delete } %>
         <%= link_to "view kitty", kitten_path(kitten.id)%>
     </div>
 <% end %>
